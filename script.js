@@ -1,11 +1,11 @@
 const videoMap = {
-  "seasonsq49pAyqh": {
-    file: "seasonsq49pAyqh.MOV",
-    title: "Nightplumes"
+  "seasonsq49payqh": {
+    file: "seasonsq49payqh.MOV",
+    title: "Stay with me, kitten. Don’t get lost."
   },
-  "seasonsv77wTuFD": {
-    file: "seasonsv77wTuFD.MOV",
-    title: "Silken Blooms"
+  "seasonsv77wtufd": {
+    file: "seasonsv77wtufd.MOV",
+    title: "In my dreams, there’s always you… and a city full of flowers"
   },
   "r4nd0m88": {
     file: "video3.mp4",
@@ -51,8 +51,7 @@ function initVideo() {
   if (!key) {
     setTitle("未提供影片參數");
     showMessage(
-      "找不到影片參數",
-      "請在網址後面加上 ?v=參數值，例如：index.html?v=abc123"
+      "找不到影片參數"
     );
     return;
   }
