@@ -1,10 +1,10 @@
 const videoMap = {
   "seasonsq49payqh": {
-    file: "seasonsq49payqh.MOV",
+    file: "seasonsq49payqh.mp4",
     title: "Stay with me, kitten. Don’t get lost."
   },
   "seasonsv77wtufd": {
-    file: "seasonsv77wtufd.MOV",
+    file: "seasonsv77wtufd.mp4",
     title: "In my dreams, there’s always you… and a city full of flowers"
   },
   "r4nd0m88": {
