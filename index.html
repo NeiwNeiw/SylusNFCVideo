@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>專屬影片播放頁</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="player-card">
+      <header class="player-header">
+        <div class="header-left">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="header-title" id="pageTitle">專屬影片播放頁</div>
+      </header>
+
+      <div class="player-body">
+        <div class="video-area">
+          <video
+            id="videoPlayer"
+            class="video-player"
+            controls
+            playsinline
+            preload="metadata"
+            controlsList="nodownload noplaybackrate"
+          >
+            <source id="videoSource" src="" type="video/mp4" />
+            你的瀏覽器不支援 HTML5 影片播放。
+          </video>
+		  <div class="play-overlay" id="playOverlay">
+			<button class="play-button" id="playButton">▶</button>
+		  </div>
+          <div class="message-layer" id="messageLayer">
+            <div class="message-box">
+              <h2 id="messageTitle">影片載入中</h2>
+              <p id="messageText">請稍候...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

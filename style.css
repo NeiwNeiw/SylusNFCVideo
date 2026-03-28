@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Noto Sans TC", "Segoe UI", Arial, sans-serif;
+  background: #0d0d0d;
+  color: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* 桌機版 */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 35%),
+    linear-gradient(180deg, #181818 0%, #0d0d0d 100%);
+}
+
+.player-card {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(20, 20, 20, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.header-title {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-align: right;
+  opacity: 0.85;
+}
+
+.player-body {
+  width: 100%;
+}
+
+.video-area {
+  position: relative;
+  width: 100%;
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;
+}
+
+.message-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.message-layer.hidden {
+  display: none;
+}
+
+.message-box {
+  width: 100%;
+  max-width: 500px;
+  padding: 28px 22px;
+  border-radius: 18px;
+  background: rgba(15, 15, 15, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.message-box h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.message-box p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* 平板 */
+@media (max-width: 960px) {
+  .page {
+    padding: 0;
+    background: #000;
+  }
+
+  .player-card {
+    max-width: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: #000;
+  }
+
+  .player-header {
+    min-height: 52px;
+    padding: 12px 14px;
+    background: rgba(20, 20, 20, 0.88);
+  }
+
+  .video-area {
+    aspect-ratio: auto;
+    height: calc(100vh - 52px);
+    min-height: 420px;
+  }
+
+  .video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* 手機滿版 */
+@media (max-width: 640px) {
+  html,
+  body {
+    background: #000;
+    overflow: hidden;
+  }
+
+  .page {
+    min-height: 100dvh;
+    height: 100dvh;
+    padding: 0;
+    background: #000;
+  }
+
+  .player-card {
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: #000;
+  }
+
+  .player-header {
+    height: 52px;
+    min-height: 52px;
+    padding: 0 12px;
+    background: rgba(10, 10, 10, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .header-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    max-width: 65%;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .player-body {
+    height: calc(100dvh - 52px);
+  }
+
+  .video-area {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    background: #000;
+  }
+
+  .video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+  }
+
+  .message-layer {
+    padding: 16px;
+  }
+
+  .message-box {
+    max-width: 100%;
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .message-box h2 {
+    font-size: 20px;
+  }
+
+  .message-box p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.play-overlay.hidden {
+  display: none;
+}
+
+.play-button {
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  border: none;
+  font-size: 34px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.08);
+}
+
+@media (max-width: 640px) {
+  .play-button {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+  }
+}
