@@ -7,9 +7,13 @@ const videoMap = {
     file: "seasonsv77wtufd.mp4",
     title: "In my dreams, there’s always you… and a city full of flowers"
   },
-   "seasons8kte9vo5s": {
+  "seasons8kte9vo5s": {
     file: "seasons8kte9vo5s.mp4",
     title: "Just so everyone knows, my heart is already taken."
+  },
+  "seasonsjantxwh7y": {
+    file: "seasonsjantxwh7y.mp4",
+    title: "Thanks for being part of my summer."
   }
 };
 
