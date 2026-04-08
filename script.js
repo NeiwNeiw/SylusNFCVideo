@@ -14,6 +14,10 @@ const videoMap = {
   "seasonsjantxwh7y": {
     file: "seasonsjantxwh7y.mp4",
     title: "Thanks for being part of my summer."
+  },
+  "daily69fug8w4d": {
+    file: "daily69fug8w4d.mp4",
+    title: "Be wild. Be free. Be alive."
   }
 };
 
