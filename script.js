@@ -18,6 +18,18 @@ const videoMap = {
   "daily69fug8w4d": {
     file: "daily69fug8w4d.mp4",
     title: "Be wild. Be free. Be alive."
+  },
+  "sexr47ekwrt1w6i": {
+    file: "sexr47ekwrt1w6i.mp4",
+    title: "If you want to tame me… you’ll need far more than that."
+  },
+  "sexkc7psg7ifwtk": {
+    file: "sexkc7psg7ifwtk.mp4",
+    title: "That’s quite bold of you… my master."
+  },
+  "sexpxeo23h8bnee": {
+    file: "sexpxeo23h8bnee.mp4",
+    title: "Look into my eyes… kitten."
   }
 };
 
